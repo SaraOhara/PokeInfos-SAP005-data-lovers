@@ -14,41 +14,65 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.margem-principal {
+.container{
     width: 90%;
     margin: auto;
 }
 
 header {    
-    padding: 8px 0;
+    padding: 10px 20px;
     background-color: var(--fundo);
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 999;
+
 }
 
-header .margem-principal {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-position: center center;
+    max-width: 1200px ;
+    margin: 0 auto;
+    padding: 0 20px;
+    
 }
 
 header .logo-tipo {
     width: 150px;
 }
-
-header nav a {
-    color: #919191 ;
-    text-decoration: none;
-    margin-right: 20px;
+ 
+header .hamburguer:after {
+  content: "";
 }
 
-header nav a:hover,
-header nav a.ativo {
+header .menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .menu li {
+
+  margin-left: 10px;
+}
+
+header .menu a {
+  color: #919191 ;
+  text-decoration: none;
+  padding: 10px 15px; 
+  display: block;
+  transition: 0.10s ease;
+}
+
+ .menu  a:hover,
+ .menu  a.ativo {
     color: #474747;
 }
+
 /*---------Pelicula Principal---------*/
 
 .pelicula-principal {
@@ -70,31 +94,151 @@ header nav a.ativo {
     margin-bottom: 0.4em;
 }
 
-.pelicula-principal .descrições {
+.pelicula-principal .descricões {
     font-weight: normal;
     font-size: 1em;
     line-height: 1.75em;
     max-width: 50%;
     margin-bottom: 1.25em;
 }
+
+/*container de titulo e controles*/
+
+.container-title-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.titulo-carrossel {
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+    color: #474747;
+}
+
+.indicadores button {
+    background: grey;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.indicadores button:hover,
+.indicadores button.activo {
+    background: orange;
+}
+
+/*container principal e flechas*/
+.pokemons-recomendados {
+    margin-bottom: 70px;
+}
+
+.container-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flecha-esquerda,.flecha-direita {
+    position: absolute;
+    border: none;
+    background: rgba(245, 242, 242, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: grey;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.flecha-esquerda:hover,
+.flecha-direita:hover {
+    background: rgba(245, 242, 242, 0.5);
+}
+
+.flecha-esquerda {
+    left: 0;
+}
+
+.flecha-direita {
+    right: 0;
+}
+
+/*carrossel*/
+.container-carrossel {
+    width: 100%;  
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carrossel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pokemon {
+    min-width: 15%;
+    transition: .3s ease all;
+}
+
+.pokemon.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.pokemon img {
+    width: 100%;
+    vertical-align: top;
+}
+
 /*---------Media---------*/
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 980px){
+   
+    .menu.active {
+      right: 0;
+    }
+
     header .logo-tipo {
         margin-bottom: 10px;
         font-size: 30px;
     }
-    header .margem-principal {
+
+    header .container {
         flex-direction: column;
         text-align: center;
     }
-    .pelicula-principal {
 
+    .pelicula-principal {
         font-size: 14px;
     }
-    .pelicula-principal .descrições {
+
+    .pelicula-principal .descricões {
         max-width: 100%;
     } 
+ 
+    .container-carrossel {
+        overflow: visible;
+    }
+
+    .carrossel {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .indicadores, 
+    .flecha-esquerda,
+    .flecha-direita {
+        display: none;
+    }
 }
     
 
