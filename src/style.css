@@ -45,9 +45,6 @@ header .logo-tipo {
     width: 150px;
 }
  
-header .hamburguer:after {
-  content: "";
-}
 
 header .menu {
   list-style: none;
@@ -75,7 +72,7 @@ header .menu a {
 
 /*---------Pelicula Principal---------*/
 
-.pelicula-principal {
+.tela-principal {
     font-size: 14px;
     min-height: 40.62em;
     color: #474747;
@@ -88,13 +85,13 @@ header .menu a {
     align-items:end;
 } 
 
-.pelicula-principal .titulo {
+.tela-principal .titulo {
     font-weight: 600;
     font-size: 3.12em;
     margin-bottom: 0.4em;
 }
 
-.pelicula-principal .descricões {
+.tela-principal .descricões {
     font-weight: normal;
     font-size: 1em;
     line-height: 1.75em;
@@ -216,11 +213,11 @@ header .menu a {
         text-align: center;
     }
 
-    .pelicula-principal {
+    .tela-principal {
         font-size: 14px;
     }
 
-    .pelicula-principal .descricões {
+    .tela-principal .descricões {
         max-width: 100%;
     } 
  

@@ -12,40 +12,30 @@
   <link rel="stylesheet" href="style.css" />
 
   <title>PokeInfos</title>
-
 </head>
 
 <body>
-
   <header>
     <div class="container">
-      <div class="logo">
-        <a href="#"><img class="logo-tipo" id="logo-tipo" src="img/logo.png" alt="logo" />
-        </a>
-      </div>
-
-      <div class="hamburguer active"> </div>
-      <ul class="menu active">
-        <li><a href="#index.html" class="ativo">Início</a></li>
-        <li> <a href="#">Estatísticas</a></li>
-        <li><a href="#">Sobre</a> </li>
-      </ul>
+      <a ref=""><img class="logo-tipo" src="img/logo.png" alt="logo" /></a>
+      <nav>
+        <div class="menu">
+          <a href="#" class="ativo">Início</a>
+          <a href="#">Estatísticas</a>
+          <a href="#">Sobre</a>
+        </div>
+      </nav>
     </div>
-
   </header>
-
   <main>
-    <div class="pelicula-principal">
-
-      <div class="margem-principal">
-        <h3 class="título">PokeInfos</h3>
-        <p class="descrições">
-          *****INSCREVER ALGO******
+    <div class="tela-principal">
+      <div class="container">
+        <h2 class="titulo">PokeInfos </h2>
+        <p class="descricao">
+          *****ESCREVER ALGO******
         </p>
       </div>
     </div>
-
-
     <div class="pokemons-recomendados container">
       <div class="container-title-control">
         <h3 class="titulo-carrossel">Pokemóns de Kanto </h3>
@@ -102,14 +92,12 @@
           </div>
 
           <button role="button" id="flecha-direita" class="flecha-direita"><i class="fas fa-chevron-right"></i></button>
-
         </div>
       </div>
   </main>
-
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>
-
+  <script src="carrossel.js" type="module"></script>
 </body>
 
 </html>
