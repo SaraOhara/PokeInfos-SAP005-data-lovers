@@ -8,3 +8,4 @@ export const anotherExample = () => {
 
   return 'OMG';
 };
+//Lógica aqui
