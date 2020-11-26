@@ -11,12 +11,7 @@ for (var chavePokemon in pokemons) {
         <img class="card-image" alt="${pokemonAtual.name}" src="https://www.serebii.net/pokemongo/pokemon/${pokemonAtual.num}.png" />
         <h2 class="card-title"> ${pokemonAtual.num}. ${pokemonAtual.name} </h2>
         <p id="card-subtitle">${pokemonAtual.size.height} | ${pokemonAtual.size.weight} </p>
-        </li>`;
-
-
-
-
-
+    </li>`;
 
 
 }
