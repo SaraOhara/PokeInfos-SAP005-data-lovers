@@ -1,24 +1,28 @@
 import data from './data/pokemon/pokemon.js';
 
-const pokemons = data.pokemon.slice(0, 10); //arrays
+const pokemons = data.pokemon.slice(0, 50); //arrays
 const cardPokemon = document.getElementById("card-pokemon");
 let cards = "";
 for (var chavePokemon in pokemons) {
     const pokemonAtual = pokemons[chavePokemon];
 
-    cards += `<div class="pokemon">  <h1 id="nome">${pokemonAtual.size.height}</h1><a href="#"><img src="${pokemonAtual.img}" alt="${pokemonAtual.name}"></a></div>`;
+    cards +=
+        `<li class="card">
+        <img class="card-image" alt="${pokemonAtual.name}" src="https://www.serebii.net/pokemongo/pokemon/${pokemonAtual.num}.png" />
+        <h2 class="card-title"> ${pokemonAtual.num}. ${pokemonAtual.name} </h2>
+        <p id="card-subtitle">${pokemonAtual.size.height} | ${pokemonAtual.size.weight} </p>
+        </li>`;
+
+
+
+
+
+
 
 }
 cardPokemon.innerHTML = cards;
 
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
+console.log(cards)
 
-floating_btn.addEventListener('click', () => {
-    social_panel_container.classList.toggle('visible')
-});
 
-close_btn.addEventListener('click', () => {
-    social_panel_container.classList.remove('visible')
-});
+    ;
