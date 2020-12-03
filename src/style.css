@@ -1,16 +1,8 @@
 :root {
     --branco: #ffffff;
-    --fundo: #e5e5e5;
+    --fundo: #f6f6f6;
 }
-.titulo-pokedex {
-	
-    font-weight: 600;
-    font-size: 2em;
-    margin-bottom: 0.4em;
-	color: #474747;
-	text-align: center;
-	font-size: 54px;
-}
+
 * { 
     margin: 0;
     padding: 0;
@@ -66,7 +58,7 @@ header .menu li {
 }
 
 header .menu a {
-  color: #919191 ;
+  color: #b8b8b8 ;
   text-decoration: none;
   padding: 10px 15px; 
   display: block;
@@ -78,7 +70,7 @@ header .menu a {
     color: #474747;
 }
 
-/*---------Pelicula Principal---------*/
+/*---------Pagina Principal---------*/
 
 .tela-principal {
     font-size: 14px;
@@ -252,7 +244,15 @@ header .menu a {
 	padding: 40px;
 	margin: 0 auto;
 }
-
+.titulo-pokedex {
+	
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+	color: #474747;
+	text-align: center;
+	font-size: 54px;
+}
 h1 {
 	text-align: center;
 	font-size: 54px;
@@ -324,15 +324,15 @@ h1 {
 }
 
 .fire {
-	background-color: #f08030;
+	background-color: #dfa67e;
 }
 
 .grass {
-	background-color: #78c850;
+	background-color: #a9ca98;
 }
 
 .electric {
-	background-color: #f8d030;
+	background-color: #ddcf97;
 }
 
 .water, .ice {
@@ -340,48 +340,48 @@ h1 {
 }
 
 .ground {
-	background-color: #e0c068;
+	background-color: #d3be87;
 }
 
 .rock {
-	background-color: #b8a038;
+	background-color: #a39a70;
 }
 
 .fairy {
-	background-color: #ee99ac;
+	background-color: #eed3d9;
 }
 
 .poison {
-	background-color: #a252a0;
+	background-color: #a07e9f;
 }
 
 .bug {
-	background-color: #a8b820;
+	background-color: #b1b494;
 }
 
 .dragon {
-	background-color: #7a6cf8;
+	background-color: #c8c5e9;
 }
 
 .psychic {
-	background-color: #ea5f88;
+	background-color: #eec9d4;
 }
 
 .flying {
-	background-color: #a890f0;
+	background-color: #d7d0ee;
 }
 
 .fighting {
-	background-color: #c24438;
+	background-color: #b88b87;
 }
 
 .normal {
-	background-color: #a8a878;
+	background-color: #aaaa8a;
 }
 
 .ghost {
 
-	background-color: #705898;
+	background-color: #878192;
 }
 .dark{
 
@@ -409,6 +409,7 @@ h1 {
 	font-weight: lighter;
 	position: relative;
 	z-index: 2;
+	text-transform: capitalize;
 }
 
 .card-subtitle2 {
@@ -417,6 +418,7 @@ h1 {
 	font-weight: lighter;
 	position: relative;
 	z-index: 2;
+	text-transform: capitalize;
 }
 
 
@@ -611,20 +613,20 @@ h1 {
 		right: 10px;
 	}
 }
+/*pesquisa*/
 
 
 
-
-
- .campo-pesquisa {
+ .pesquisa {
     max-width: 1100px;
     width: calc(100% - 40px);
     position: relative;
-    margin: 0 auto 20px;
+	margin: 0 auto 20px;
+	
 }
 
 
-article.search input {
+section.pesquisa input {
     padding: 0 18px;
     line-height: 56px;
     height: 56px;
@@ -635,6 +637,7 @@ article.search input {
 	background: 0 0;
     border: none;
 	border-radius: 28px;
-	background-color: #868d9c;
+	background-color: #ffffff;
+	outline-style: none;
 }
 
