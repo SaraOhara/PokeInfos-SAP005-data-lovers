@@ -197,6 +197,49 @@ header .menu a {
     vertical-align: top;
 }
 
+    
+/*PESQUISA*/
+
+
+
+.pesquisa {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    position: relative;
+	margin: 0 auto 20px;
+	
+}
+
+
+.pesquisa input {
+    padding: 0 18px;
+    line-height: 56px;
+    height: 56px;
+    font-size: 22px;
+    color: #444;
+    text-align: center;
+	width: 100%;
+	background: 0 0;
+    border: none;
+	border-radius: 28px;
+	background-color: #ffffff;
+	outline-style: none;
+}
+
+.filter-typeselect {
+	
+	appearance: none; /* Remove estilo padrão do FireFox*/   
+	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */  
+	background-position: 218px center;  /*Posição da imagem do background*/  
+	width: 250px;; /* Tamanho do select, maior que o tamanho da div "div-select" */   
+	height:56px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */   
+	border: none;
+	border-radius: 28px;
+	background-color: #ffffff;
+	outline-style: none;
+	max-width: 1100px;
+    
+}
 
 
 /*---------Card---------*/
@@ -210,6 +253,7 @@ header .menu a {
     margin-bottom: 0.4em;
     color: #908484;
 	text-align: center;
+	font-size: 54px;
 }
 
 
@@ -360,15 +404,6 @@ header .menu a {
 
 
 
-
-
-
-
-
-
-
-    
-
 /* SOCIAL PANEL CSS */
 .social-panel-container {
 	position: fixed;
@@ -385,8 +420,8 @@ header .menu a {
 .social-panel {	
 	background-color: #fff;
 	border-radius: 16px;
-	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
-	border: 5px solid #001F61;
+	box-shadow: 0 16px 31px -17px rgba(199,209,230,0.6);
+	border: 5px solid gray;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -414,9 +449,9 @@ header .menu a {
 }
 
 .social-panel p {
-	background-color: #001F61;
+	background-color: grey;
 	border-radius: 0 0 10px 10px;
-	color: #fff;
+	color: orange;
 	font-size: 14px;
 	line-height: 18px;
 	padding: 2px 17px 6px;
@@ -434,13 +469,13 @@ header .menu a {
 }
 
 .social-panel p a {
-	color: #FF7500;
+	color: orange;
 	text-decoration: none;
 }
 
 .social-panel h4 {
 	margin: 20px 0;
-	color: #97A5CE;	
+	color:gray;	
 	font-family: 'Muli';	
 	font-size: 14px;	
 	line-height: 18px;
@@ -459,7 +494,7 @@ header .menu a {
 }
 
 .social-panel ul li a {
-	border: 1px solid #DCE1F2;
+	border: 1px solid orange;
 	border-radius: 50%;
 	color: #001F61;
 	font-size: 20px;
@@ -472,14 +507,14 @@ header .menu a {
 }
 
 .social-panel ul li a:hover {
-	border-color: #FF6A00;
-	box-shadow: 0 9px 12px -9px #FF6A00;
+	border-color: orange;
+	box-shadow: 0 9px 12px -9px orange;
 }
 
 .floating-btn {
 	border-radius: 26.5px;
-	background-color: #001F61;
-	border: 1px solid #001F61;
+	background-color: gray;
+	border: 1px solid gray;
 	box-shadow: 0 16px 22px -17px #03153B;
 	color: #fff;
 	cursor: pointer;
@@ -493,8 +528,8 @@ header .menu a {
 }
 
 .floating-btn:hover {
-	background-color: #ffffff;
-	color: #001F61;
+	background-color: orange;
+	color: gray;
 }
 
 .floating-btn:focus {
@@ -502,7 +537,7 @@ header .menu a {
 }
 
 .floating-text {
-	background-color: #001F61;
+	background-color: gray;
 	border-radius: 10px 10px 0 0;
 	color: #fff;
 	font-family: 'Muli';
@@ -514,35 +549,6 @@ header .menu a {
 }
 
 .floating-text a {
-	color: #FF7500;
+	color: orange;
 	text-decoration: none;
 }
-
-/*pesquisa*/
-
-
-
- .campo-pesquisa {
-    max-width: 1100px;
-    width: calc(100% - 40px);
-    position: relative;
-	margin: 0 auto 20px;
-	
-}
-
-
-section.campo-pesquisa input {
-    padding: 0 18px;
-    line-height: 56px;
-    height: 56px;
-    font-size: 22px;
-    color: #444;
-    text-align: center;
-	width: 100%;
-	background: 0 0;
-    border: none;
-	border-radius: 28px;
-	background-color: #ffffff;
-	outline-style: none;
-}
-

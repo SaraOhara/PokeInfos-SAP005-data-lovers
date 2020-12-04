@@ -1,54 +1,66 @@
 import data from './data/pokemon/pokemon.js';
-import { filterData, orderData } from './data.js';
+import { selectType, searchByName, orderBy } from './data.js'
 
 const pokemons = data.pokemon.slice(0, 102);
 const cardPokemon = document.getElementById("card");
 
-function cardsPokemon() {
+
+function cardsPokemon(pokemonArray) {
   let cards = "";
-  pokemons.forEach(arr => {
-    const types = arr.type;
+  pokemonArray.forEach(pokemonAtual => {
+    const types = pokemonAtual.type;
     cards +=
-      `
-      
-      <section class="card ${types[0]}">
-      <div class="flip" >
-     
-            <img class="card-image " alt="${arr.name}" src="https://www.serebii.net/pokemongo/pokemon/${arr.num}.png" />
-            <h2 class="card-title"> ${arr.num}.${arr.name.toLocaleUpperCase().replace("(FEMALE)", "").replace("(MALE)", "")} </h2>
-            <p class="card-subtitle" id="card-subtitle">${arr.size.height} | ${arr.size.weight} <br /> ━━━ <br />${types.join(' | ')} </p>
-            
-            </section >
-            
-        </div>`;
+      `<section class="card ${types[0]}">
+           
+      <img class="card-image " alt="${pokemonAtual.name}" src="https://www.serebii.net/pokemongo/pokemon/${pokemonAtual.num}.png" />
+      <h2 class="card-title"> ${pokemonAtual.num}.${pokemonAtual.name.toLocaleUpperCase().replace("(FEMALE)", "").replace("(MALE)", "")} </h2>
+      <p class="card-subtitle" id="card-subtitle">${pokemonAtual.size.height} | ${pokemonAtual.size.weight} <br /> ━━━━━━━━━ <br />${types.join(' | ')} </p>
+       </section >`;
 
   });
   cardPokemon.innerHTML = cards;
 }
-cardsPokemon();
 
+cardsPokemon(pokemons);
 
+// Filtros pro select (pré-prontos)
 
+const filterSelectType = document.querySelector("#filter-type");
 
-
-
-
-
-
-const search = document.getElementById('filter-name');
-search.addEventListener('keyup', function () {
-  let pokemons = filterData(data.pokemon, { name: search.value.toLowerCase() });
-  document.getElementById('card').innerHTML = "";
-  load(pokemons);
+filterSelectType.addEventListener("change", () => {
+  const filterType = filterSelectType.value;
+  const arrayFiltered = selectType(filterType, data.pokemon);
+  cardsPokemon(arrayFiltered);
 })
 
-const order = document.getElementById('select-option');
-order.addEventListener('change', function () {
-  let pokemons = filterData(data.pokemon, { type: order.options[order.selectedIndex].value });
-  document.getElementById('card').innerHTML = "";
-  orderData(pokemons);
-  load(pokemons);
+// Filtro de ordem select
+
+const filterSelectOrder = document.querySelector("#order-search");
+
+filterSelectOrder.addEventListener("change", (event) => {
+  const orderType = event.target.value;
+  const arrayOrdered = orderBy(orderType, data.pokemon);
+  cardsPokemon(arrayOrdered);
 })
 
-document.getElementById('card').appendChild(card);
+// Filtro por input (texto) de nome
 
+const filterInputType = document.querySelector("#search-input");
+
+filterInputType.addEventListener("change", () => {
+  const filterName = filterInputType.value;
+  const arrayFiltered = searchByName(filterName, data.pokemon);
+  cardsPokemon(arrayFiltered);
+})
+
+filterInputType.addEventListener("keyup", (event) => {
+
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
+
+  const filterName = event.target.value;
+  const arrayFiltered = searchByName(filterName, data.pokemon);
+  cardsPokemon(arrayFiltered);
+
+})

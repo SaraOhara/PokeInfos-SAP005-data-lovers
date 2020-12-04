@@ -1,25 +1,26 @@
-function getPokemonByNum(data, num) {
-    let filtered = data.filter(pokemon => pokemon.num == num);
-    if (filtered[0]) {
-        return filtered[0];
+export const searchByName = (name, data) => {
+    return data.filter((select) => select.name.includes(name.toLowerCase()));
+};
+
+export const selectType = (selectByType, data) => {
+    return data.filter((select) => select.type.includes(selectByType));
+};
+
+export const orderBy = (orderBy, data) => {
+    if (orderBy === 'order-az') {
+        data.sort(function (a, b) {
+            var textA = a.name.toLowerCase();
+            var textB = b.name.toLowerCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        })
     }
-    return false;
-};
 
-function filterData(data, condition) {
-    return data.filter(pokemon => {
-        if (condition.name != 'undefined' && pokemon.name.includes(condition.name)) {
-            return true;
-        }
-        if (condition.type && pokemon.type.indexOf(condition.type) != -1 || condition.type == "") {
-            return true;
-        }
-        return false;
-    });
+    if (orderBy === 'order-za') {
+        data.sort(function (a, b) {
+            var textA = a.name.toLowerCase();
+            var textB = b.name.toLowerCase();
+            return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+        })
+    }
+    return data;
 };
-
-function orderData(data) {
-    data.sort();
-};
-
-export { getPokemonByNum, filterData, orderData };
