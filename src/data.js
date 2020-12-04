@@ -1,22 +1,25 @@
-
-
-const filtrar = (arr, condition, key) => {
-  return arr.filter(item => item[key].includes(condition));
+function getPokemonByNum(data, num) {
+    let filtered = data.filter(pokemon => pokemon.num == num);
+    if (filtered[0]) {
+        return filtered[0];
+    }
+    return false;
 };
 
-const ordenar = (arr, condition, key) => {
-  if (condition == "A - Z" || condition == "maisRaros") {
-    return arr.sort((a, b) => a[key] > b[key] ? 1 : -1);
-
-  } if (condition == "Z - A" || condition == "menosRaros") {
-    return arr.sort((a, b) => a[key] < b[key] ? 1 : -1);
-  }
+function filterData(data, condition) {
+    return data.filter(pokemon => {
+        if (condition.name != 'undefined' && pokemon.name.includes(condition.name)) {
+            return true;
+        }
+        if (condition.type && pokemon.type.indexOf(condition.type) != -1 || condition.type == "") {
+            return true;
+        }
+        return false;
+    });
 };
 
-const media = (arr) => (arr.map((i) => Number(i.replace(/[^0-9.,]+/g, ""))).reduce((pv, item) => (pv + item)) / (arr.length));
-
-app = {
-  filtrar: filtrar,
-  ordenar: ordenar,
-  media: media,
+function orderData(data) {
+    data.sort();
 };
+
+export { getPokemonByNum, filterData, orderData };

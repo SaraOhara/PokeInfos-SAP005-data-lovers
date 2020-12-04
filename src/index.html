@@ -85,16 +85,38 @@
       </div>
       <section class="campo-pesquisa">
         <article class="search">
-          <input type="search" id="busca" name="" placeholder="Buscar um Pokémon, p.ex. Drowzee" value=""
-            autocomplete="off">
+          <input type="text-area" id="filter-name" placeholder="Buscar um Pokémon, p.ex. Drowzee" value=""
+            autocomplete="off" class="filter-name">
         </article>
       </section>
+
+      <div class="order">
+      <select name="select-option" id= "select-option" class="option">
+      <option selected value="">SELECIONE A ORDEM</option>
+      <option value="water">ÁGUA</option>
+      <option value="dragon">DRAGÃO</option>
+      <option value="electric">ELÉTRICO</option>
+      <option value="fairy">FADA</option>
+      <option value="fire">FOGO</option>
+      <option value="ice">GELO</option>
+      <option value="bug">INSETO</option>
+      <option value="fighting">LUTADOR</option>
+      <option value="metallic">METÁLICO</option>
+      <option value="normal">NORMAL</option>
+      <option value="dark">NOTURNO</option>
+      <option value="psychic">PSÍQUICO</option>
+      <option value="grass">PLANTA</option>
+      <option value="ground">TERRA</option>
+      <option value="poison">VENENOSO</option>
+      <option value="flying">VOADOR</option>
+      </select>
+    </div>
 
     </nav>
     <nav id="Pokedéx">
       <div class="container-pokedex ">
-        <h1 class="titulo-pokedex">Pokedex</h1>
-        <div id="card" class="pokedex"></div>
+        <h3 class="titulo-pokedex">Pokedex</h3>
+        <article id="card" class="pokedex"></article>
       </div>
 
     </nav>
@@ -121,7 +143,7 @@
 
   <!----Painel Social / Créditos--->
   <!-- SOCIAL PANEL HTML -->
-  <div class="social-panel-container">
+  <footer class="social-panel-container">
     <div class="social-panel">
 
 
@@ -167,19 +189,19 @@
         </li>
       </ul>
     </div>
-  </div>
+  </footer>
+  <footer>
+    <button class="floating-btn">
+      Entrar em Contato
+    </button>
 
-  <button class="floating-btn">
-    Entrar em Contato
-  </button>
+    <div class="floating-text">
+      Projeto<a
+        href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
+        target="_blank"> Laboratória</a>
+    </div>
 
-  <div class="floating-text">
-    Projeto<a
-      href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
-      target="_blank"> Laboratória</a>
-  </div>
-
-
+  </footer>
 
 
 
@@ -187,6 +209,7 @@
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>
   <script src="carrossel.js" type="module"></script>
+  <script src="pokedex.js" type="module"></script>
 </body>
 
 </html>

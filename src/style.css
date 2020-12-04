@@ -204,6 +204,16 @@ header .menu a {
 	padding: 40px;
 	margin: 0 auto;
 }
+.titulo-pokedex{
+	font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+    color: #908484;
+	text-align: center;
+}
+
+
+
 .pokedex {
 	display: flex;
 	flex-wrap: wrap;
@@ -512,7 +522,7 @@ header .menu a {
 
 
 
- .pesquisa {
+ .campo-pesquisa {
     max-width: 1100px;
     width: calc(100% - 40px);
     position: relative;
@@ -521,7 +531,7 @@ header .menu a {
 }
 
 
-section.pesquisa input {
+section.campo-pesquisa input {
     padding: 0 18px;
     line-height: 56px;
     height: 56px;
