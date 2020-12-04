@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="media.css" />
 
   <title>PokeInfos</title>
 </head>
@@ -24,7 +25,7 @@
           <a href="#" class="ativo">Início</a>
           <a href="#">Estatísticas</a>
           <a href="#">Sobre</a>
-          <a href="#campo-pesquisa">Pesquisa</a>
+          <a href="#">Pesquisa</a>
           <a href="#Pokedéx">Pokedéx</a>
         </div>
     </nav>
@@ -35,7 +36,7 @@
         <div class="container">
           <h2 class="titulo">PokeInfos </h2>
           <p class="descricao">
-            *****ESCREVER ALGO******
+            **ESCREVER ALGO***
           </p>
         </div>
       </div>
@@ -54,7 +55,7 @@
               class="fas fa-chevron-left"></i></button>
 
           <div class="container-carrossel">
-            <div id="campo-pesquisa" class="carrossel">
+            <div id="" class="carrossel">
               <div class="pokemon">
                 <a href="#"><img
                     src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
@@ -70,73 +71,27 @@
                     src="https://cdn.ome.lt/32mlL-S2cNECoVabw-3VThlWiiY=/770x0/smart/uploads/conteudo/fotos/Pokemon_GO_9pfXpla.jpg"
                     alt="bulbasaur"></a>
               </div>
-              <button role="button" id="flecha-direita" class="flecha-direita"><i
-                  class="fas fa-chevron-right"></i></button>
-
-
-
-
             </div>
+            <button role="button" id="flecha-direita" class="flecha-direita"><i
+                class="fas fa-chevron-right"></i></button>
+
+
+
+
           </div>
-
-
         </div>
+
+
+      </div>
+      <section class="campo-pesquisa">
+        <article class="search">
+          <input type="search" id="busca" name="" placeholder="Buscar um Pokémon, p.ex. Drowzee" value=""
+            autocomplete="off">
+        </article>
+      </section>
+
     </nav>
-
-    <nav class="menu font-std">
-      <form action="" id="search-form" class="search-form font-std">
-
-
-
-        <section id="Pokedéx" class="pesquisa">
-
-
-          <input type="search" placeholder="Buscar um Pokémon, p.ex. Drowzee" value="" autocomplete="off">
-
-        </section>
-
-        <select id="filter-type" class="filter-type select">
-          <option value="" disabled="" selected=""> Tipos</option>
-          <option value="Water">Água</option>
-          <option value="Dragon">Dragão</option>
-          <option value="Electric">Elétrico</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Fire">Fogo</option>
-          <option value="Ice">Gelo</option>
-          <option value="Grass">Grama</option>
-          <option value="Bug">Inseto</option>
-          <option value="Fighting">Lutador</option>
-          <option value="Normal">Normal</option>
-          <option value="Rock">Pedra</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Ground">Terrestre</option>
-          <option value="Poison">Venenoso</option>
-          <option value="Flying">Voador</option>
-        </select>
-
-
-
-        <select id="order-search" class="order-search select">
-          <option id="teste" value="" disabled="" selected=""> Ordenar por</option>
-          <option value="order-az"> Crescente</option>
-          <option value="order-za"> Decrescente</option>
-
-
-        </select>
-
-      </form>
-    </nav>
-
-
-
-
-
-
-
-
-
-
-    <nav>
+    <nav id="Pokedéx">
       <div class="container-pokedex ">
         <h1 class="titulo-pokedex">Pokedex</h1>
         <div id="card" class="pokedex"></div>
@@ -165,8 +120,11 @@
 
 
   <!----Painel Social / Créditos--->
+  <!-- SOCIAL PANEL HTML -->
   <div class="social-panel-container">
     <div class="social-panel">
+
+
       <p>Criado com <i class="fa fa-heart"></i> por <br />
         <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a> e
         <a target="_blank" href="https://github.com/JuliaTerin">Julia Terin</a></p>

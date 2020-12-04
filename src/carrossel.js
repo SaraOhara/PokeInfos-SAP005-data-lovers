@@ -59,6 +59,7 @@ fila.addEventListener('mouseleave', () => {
 
 
 //Créditos Finais
+
 const floating_btn = document.querySelector('.floating-btn');
 const close_btn = document.querySelector('.close-btn');
 const social_panel_container = document.querySelector('.social-panel-container');
@@ -68,5 +69,5 @@ floating_btn.addEventListener('click', () => {
 });
 
 close_btn.addEventListener('click', () => {
-    zsocial_panel_container.classList.remove('visible')
+    social_panel_container.classList.remove('visible')
 });

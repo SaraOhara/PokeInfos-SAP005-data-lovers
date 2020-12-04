@@ -1,32 +1,23 @@
 import data from './data/pokemon/pokemon.js';
-const pokemons = data.pokemon;
+const pokemons = data.pokemon.slice(0, 102);
 
 const cardPokemon = document.getElementById("card");
-
+data.pokemon.slice(0, 1);
 function cardsPokemon() {
-    let cards = "";
-    pokemons.forEach(pokemonAtual => {
-        const types = pokemonAtual.type;
-        cards +=
-            `<li class="card ${types[0]}">
-            <img class="card-image " alt="${pokemonAtual.name}" src="https://www.serebii.net/pokemongo/pokemon/${pokemonAtual.num}.png" />
-            <h2 class="card-title"> ${pokemonAtual.num}. ${pokemonAtual.name} </h2>
-            <p class="card-subtitle" id="card-subtitle">${pokemonAtual.size.height} | ${pokemonAtual.size.weight} </p>
-            <p class="card-subtitle2" id="card-subtitle2">${types.join(' | ')} </p>
+  let cards = "";
+  pokemons.forEach(arr => {
+    const types = arr.type;
+    cards +=
+      `<div class="card ${types[0]}">
+            <img class="card-image " alt="${arr.name}" src="https://www.serebii.net/pokemongo/pokemon/${arr.num}.png" />
+            <h2 class="card-title"> ${arr.num}.${arr.name.toLocaleUpperCase().replace("(FEMALE)", "").replace("(MALE)", "")} </h2>
+            <p class="card-subtitle" id="card-subtitle">${arr.size.height} | ${arr.size.weight} <br /> ━━━ <br />${types.join(' | ')} </p>
             
-        </li>`;
+            
+            
+        </div>`;
 
-    });
-    cardPokemon.innerHTML = cards;
+  });
+  cardPokemon.innerHTML = cards;
 }
 cardsPokemon();
-
-
-
-
-
-
-
-
-
-
