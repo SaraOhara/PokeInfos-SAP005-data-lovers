@@ -1,5 +1,5 @@
-import data from './data/pokemon/pokemon.js';
-import { selectType, searchByName, orderBy } from './data.js'
+import data from './data/pokemon.js';
+import { calcType, selectType, searchByName, orderBy } from './data.js'
 
 const pokemons = data.pokemon.slice(0, 102);
 const cardPokemon = document.getElementById("card");
@@ -29,9 +29,20 @@ const filterSelectType = document.querySelector("#filter-type");
 
 filterSelectType.addEventListener("change", () => {
   const filterType = filterSelectType.value;
-  const arrayFiltered = selectType(filterType, data.pokemon);
+  const arrayFiltered = selectType(filterType, pokemons);
   cardsPokemon(arrayFiltered);
+  typePercent();
 })
+
+function typePercent() {
+  document.getElementById("porcentagem").innerHTML = "",
+    document.getElementById("porcentagem").style.display = "block";
+  const filterType = document.getElementById("#filter-type").value;
+  let result = calcType(pokemons, filterType);
+  document.getElementById("porcentagem").innerText += `${result}% de Pokémon são deste tipo.`
+}
+
+
 
 // Filtro de ordem select
 
@@ -39,7 +50,7 @@ const filterSelectOrder = document.querySelector("#order-search");
 
 filterSelectOrder.addEventListener("change", (event) => {
   const orderType = event.target.value;
-  const arrayOrdered = orderBy(orderType, data.pokemon);
+  const arrayOrdered = orderBy(orderType, pokemons);
   cardsPokemon(arrayOrdered);
 })
 
@@ -49,7 +60,7 @@ const filterInputType = document.querySelector("#search-input");
 
 filterInputType.addEventListener("change", () => {
   const filterName = filterInputType.value;
-  const arrayFiltered = searchByName(filterName, data.pokemon);
+  const arrayFiltered = searchByName(filterName, pokemons);
   cardsPokemon(arrayFiltered);
 })
 
@@ -60,7 +71,22 @@ filterInputType.addEventListener("keyup", (event) => {
   }
 
   const filterName = event.target.value;
-  const arrayFiltered = searchByName(filterName, data.pokemon);
+  const arrayFiltered = searchByName(filterName, pokemons);
   cardsPokemon(arrayFiltered);
 
 })
+
+//Créditos Finais
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
+
+floating_btn.addEventListener('click', () => {
+  social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+  social_panel_container.classList.remove('visible')
+});
+
+

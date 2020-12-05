@@ -1,6 +1,6 @@
 :root {
     --branco: #ffffff;
-    --fundo: #dfdbdb;
+    --fundo: hsl(0, 22%, 95%);
 }
 
 * { 
@@ -27,7 +27,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
-
 }
 
 header .container {
@@ -38,14 +37,12 @@ header .container {
     max-width: 1200px ;
     margin: 0 auto;
     padding: 0 20px;
-    
 }
 
 header .logo-tipo {
     width: 150px;
 }
  
-
 header .menu {
   list-style: none;
   display: flex;
@@ -109,10 +106,12 @@ header .menu a {
 }
 
 .titulo-carrossel {
-    font-weight: 600;
+   	font-weight: 600;
     font-size: 2em;
     margin-bottom: 0.4em;
-    color: #474747;
+    color: #908484;
+	text-align: center;
+	font-size: 35px;
 }
 
 .indicadores button {
@@ -196,20 +195,15 @@ header .menu a {
     width: 100%;
     vertical-align: top;
 }
-
     
-/*PESQUISA*/
-
-
+/*PESQUISAS*/
 
 .pesquisa {
     max-width: 1100px;
     width: calc(100% - 40px);
     position: relative;
 	margin: 0 auto 20px;
-	
 }
-
 
 .pesquisa input {
     padding: 0 18px;
@@ -226,8 +220,7 @@ header .menu a {
 	outline-style: none;
 }
 
-.filter-typeselect {
-	
+.filter-typeselect, .order-search {
 	appearance: none; /* Remove estilo padrão do FireFox*/   
 	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */  
 	background-position: 218px center;  /*Posição da imagem do background*/  
@@ -238,15 +231,28 @@ header .menu a {
 	background-color: #ffffff;
 	outline-style: none;
 	max-width: 1100px;
-    
+	text-align: center;
+	color: #444;
+	font-size: 22px;
 }
 
+fieldset{
+	border: none;
+}	
+
+.section-buttons {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+}
 
 /*---------Card---------*/
+
 .container-pokedex {
 	padding: 40px;
 	margin: 0 auto;
 }
+
 .titulo-pokedex{
 	font-weight: 600;
     font-size: 2em;
@@ -256,8 +262,6 @@ header .menu a {
 	font-size: 54px;
 }
 
-
-
 .pokedex {
 	display: flex;
 	flex-wrap: wrap;
@@ -265,11 +269,7 @@ header .menu a {
 	gap: 3vw 10px;
 }
 
-
-
 .card {
-	
-	
 	color: #222;
 	text-align: center;
 	border-radius: 20px;
@@ -277,29 +277,24 @@ header .menu a {
 	z-index: 0;
 	width: 29vw;
 	padding: 30px 31px;
-	
 }
-
 
 .card::after {
 	content: "";
-  display: block;
-  width: 50%;
-  height: 45%;
-  border-radius: 100%;
-  background-color: #fff;
-  opacity: .7;
-  position: absolute;
-  top: 15%;
-  left: 25%;
+	display: block;
+	width: 50%;
+	height: 45%;
+	border-radius: 100%;
+	background-color: #fff;
+	opacity: .7;
+	position: absolute;
+	top: 15%;
+	left: 25%;
 }
 
 .card:hover {
 	animation: bounce 0.5s linear;
 }
-
-
-
 
 .steel {
 	background-color: #c0c0df;
@@ -370,9 +365,6 @@ header .menu a {
 	background-color: #705848;
 }
 
-
-
-
 .card-title {
 	text-transform: capitalize;
 	margin-bottom: 0px;
@@ -390,11 +382,7 @@ header .menu a {
 	position: relative;
 	z-index: 2;
 	text-transform: capitalize;
-	
 }
-
-
-
 
 .card-image {
 	height: 175px;
@@ -402,9 +390,8 @@ header .menu a {
 	z-index: 2;
 }
 
-
-
 /* SOCIAL PANEL CSS */
+
 .social-panel-container {
 	position: fixed;
 	right: 0;
@@ -493,6 +480,11 @@ header .menu a {
 	margin: 0 10px;
 }
 
+.porcentagem {
+	width: 60vw;
+	font-size: 1.2em;
+}
+
 .social-panel ul li a {
 	border: 1px solid orange;
 	border-radius: 50%;
@@ -552,3 +544,4 @@ header .menu a {
 	color: orange;
 	text-decoration: none;
 }
+
