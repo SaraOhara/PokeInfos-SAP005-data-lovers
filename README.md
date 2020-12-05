@@ -90,7 +90,7 @@ Há um carrossel de imagens com links adicionais sobre o universo Pokémon, logo
 
 
 
-## Acesse o site aqui: [PokeInfos](https://saraohara.github.io/PokeInfos-SAP005-data-lovers/#Poked%C3%A9x)
+## Acesse o site aqui: [PokeInfos](https://saraohara.github.io/PokeInfos-SAP005-data-lovers/src/)
 
 ### Desenvolvido por Julia Terin e Sara Viana através do Projeto da [Laboratoria](https://www.laboratoria.la/) 💛
 
