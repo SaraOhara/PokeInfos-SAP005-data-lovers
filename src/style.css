@@ -248,9 +248,22 @@ fieldset{
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: nowrap;
-	
 }
 
+.aggregate-calculation {
+	text-align: center;
+	color: #666;
+	margin-top: 20px;
+	padding: 0 18px;
+    line-height: 56px;
+    height: 56px;
+    font-size: 22px;
+    width: 100%;
+    background: 0 0;
+    border: none;
+    border-radius: 28px;
+    outline-style: none;
+}
 
 /*---------Card---------*/
 
@@ -486,21 +499,7 @@ fieldset{
 	margin: 0 10px;
 }
 
-.aggregate-calculation {
-		
-	text-align: center;
-	color: #666;
-	margin-top: 20px;
-	padding: 0 18px;
-    line-height: 56px;
-    height: 56px;
-    font-size: 22px;
-    width: 100%;
-    background: 0 0;
-    border: none;
-    border-radius: 28px;
-    outline-style: none;
-}
+
 
 
 .social-panel ul li a {
