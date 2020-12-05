@@ -1,7 +1,7 @@
 import data from './data/pokemon.js';
 import { searchByName, selectType, calcType, orderBy } from './data.js'
 
-const pokemons = data.pokemon.slice(0, 102);
+const pokemons = data.pokemon.slice(0, 249);
 const cardPokemon = document.getElementById("card");
 
 
@@ -40,10 +40,9 @@ function typePercent() {
   document.getElementById("aggregate-calculation").innerHTML = "";
   const filterType = document.getElementById("filter-type").value;
   let result = calcType(pokemons, filterType);
-  document.getElementById("aggregate-calculation").innerText += `${result}% de Pokémon são deste tipo.`
 
+  document.getElementById("aggregate-calculation").innerText += `Entre os tipos de Pokemóns selecionado representam ${result}% do total.`
 }
-
 
 // Filtro de ordem select
 
