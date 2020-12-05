@@ -1,5 +1,5 @@
 import data from './data/pokemon.js';
-import { calcType, selectType, searchByName, orderBy } from './data.js'
+import { searchByName, selectType, calcType, orderBy } from './data.js'
 
 const pokemons = data.pokemon.slice(0, 102);
 const cardPokemon = document.getElementById("card");
@@ -23,7 +23,7 @@ function cardsPokemon(pokemonArray) {
 
 cardsPokemon(pokemons);
 
-// Filtros pro select (pré-prontos)
+// Filtros pro select
 
 const filterSelectType = document.querySelector("#filter-type");
 
@@ -34,14 +34,15 @@ filterSelectType.addEventListener("change", () => {
   typePercent();
 })
 
-function typePercent() {
-  document.getElementById("porcentagem").innerHTML = "",
-    document.getElementById("porcentagem").style.display = "block";
-  const filterType = document.getElementById("#filter-type").value;
-  let result = calcType(pokemons, filterType);
-  document.getElementById("porcentagem").innerText += `${result}% de Pokémon são deste tipo.`
-}
+//Porcentagem
 
+function typePercent() {
+  document.getElementById("aggregate-calculation").innerHTML = "";
+  const filterType = document.getElementById("filter-type").value;
+  let result = calcType(pokemons, filterType);
+  document.getElementById("aggregate-calculation").innerText += `${result}% de Pokémon são deste tipo.`
+
+}
 
 
 // Filtro de ordem select
@@ -75,18 +76,4 @@ filterInputType.addEventListener("keyup", (event) => {
   cardsPokemon(arrayFiltered);
 
 })
-
-//Créditos Finais
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
-
-floating_btn.addEventListener('click', () => {
-  social_panel_container.classList.toggle('visible')
-});
-
-close_btn.addEventListener('click', () => {
-  social_panel_container.classList.remove('visible')
-});
-
 

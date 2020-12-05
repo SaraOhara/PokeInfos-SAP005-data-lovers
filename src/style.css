@@ -73,8 +73,8 @@ header .menu a {
     font-size: 14px;
     min-height: 40.62em;
     color: #474747;
-    background: linear-gradient(to right, rgba(197, 230, 236, 0.5) 0%, 
-    rgba(239, 187, 230, 0.5) 100%) ,url("img/fundo.gif");
+    background: linear-gradient(to right, rgba(226, 225, 142, 0.5) 0%, 
+    rgba(140, 175, 137, 0.5) 100%) ,url("img/fundo.gif");
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -220,20 +220,26 @@ header .menu a {
 	outline-style: none;
 }
 
-.filter-typeselect, .order-search {
+.filter-typeselect, 
+.order-search {
 	appearance: none; /* Remove estilo padrão do FireFox*/   
-	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */  
+	padding: 0 18px;
+	font-size: 22px;
+	color: #444;
+	background: url("https://raw.githubusercontent.com/JuliaTerin/PokeInfos-SAP005-data-lovers/master/src/img/seta.png") no-repeat #eeeeee;
 	background-position: 218px center;  /*Posição da imagem do background*/  
+	max-width: 250px;
+	width: calc(100% - 40px);
 	width: 250px;; /* Tamanho do select, maior que o tamanho da div "div-select" */   
+	position: relative;
 	height:56px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */   
 	border: none;
 	border-radius: 28px;
 	background-color: #ffffff;
 	outline-style: none;
-	max-width: 1100px;
 	text-align: center;
 	color: #444;
-	font-size: 22px;
+	
 }
 
 fieldset{
@@ -480,7 +486,7 @@ fieldset{
 	margin: 0 10px;
 }
 
-.porcentagem {
+.aggregate-calculation {
 	width: 60vw;
 	font-size: 1.2em;
 }
