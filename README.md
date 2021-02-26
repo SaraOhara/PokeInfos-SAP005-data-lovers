@@ -1,5 +1,4 @@
-# PokeInfos
-
+# ![Imagem]file:///home/sara/Downloads/Zoey-Burns.webp
 Página web de visualização de dados sobre Pokémon criada por [Julia Terin](https://github.com/JuliaTerin) e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
 
 ## Índice
