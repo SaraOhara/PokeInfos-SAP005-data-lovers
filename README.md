@@ -1,4 +1,4 @@
-# ![Imagem]file:///home/sara/Downloads/Zoey-Burns.webp
+# ![Imagem](https://github.com/SaraOhara/PokeInfos-SAP005-data-lovers/blob/master/img_readme/Zoey%20Burns.gif)
 Página web de visualização de dados sobre Pokémon criada por [Julia Terin](https://github.com/JuliaTerin) e [Sara Viana](https://github.com/SaraOhara) durante o Bootcamp Laboratória - SAP005.
 
 ## Índice
